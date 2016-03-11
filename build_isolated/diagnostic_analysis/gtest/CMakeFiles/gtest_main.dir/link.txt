@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC    -shared -Wl,-soname,libgtest_main.so -o libgtest_main.so CMakeFiles/gtest_main.dir/src/gtest_main.cc.o  -L/home/pi/manta_ws/build_isolated/diagnostic_analysis/gtest/src -lpthread libgtest.so -lpthread -Wl,-rpath,/home/pi/manta_ws/build_isolated/diagnostic_analysis/gtest/src:/home/pi/manta_ws/build_isolated/diagnostic_analysis/gtest 

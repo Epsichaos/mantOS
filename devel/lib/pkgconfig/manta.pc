@@ -1,0 +1,8 @@
+prefix=/home/pi/manta_ws/devel
+
+Name: manta
+Description: Description of manta
+Version: 0.0.0
+Cflags: -I/home/pi/manta_ws/devel/include
+Libs: -L/home/pi/manta_ws/devel/lib 
+Requires: message_runtime
