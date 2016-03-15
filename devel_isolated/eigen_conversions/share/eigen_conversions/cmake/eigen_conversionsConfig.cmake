@@ -122,7 +122,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/pi/manta_ws/devel_isolated/eigen_conversions/lib;/home/pi/manta_ws/devel_isolated/nav_msgs/lib;/home/pi/manta_ws/devel_isolated/manta/lib;/home/pi/manta_ws/devel_isolated/geometry_msgs/lib;/home/pi/manta_ws/devel_isolated/geometry/lib;/home/pi/manta_ws/devel_isolated/dynamic_reconfigure/lib;/home/pi/manta_ws/devel_isolated/diagnostics/lib;/home/pi/manta_ws/devel_isolated/diagnostic_common_diagnostics/lib;/home/pi/manta_ws/devel_isolated/diagnostic_updater/lib;/home/pi/manta_ws/devel_isolated/diagnostic_analysis/lib;/home/pi/manta_ws/devel_isolated/diagnostic_msgs/lib;/home/pi/manta_ws/devel_isolated/common_msgs/lib;/home/pi/manta_ws/devel_isolated/actionlib_msgs/lib;/opt/ros/indigo/lib)
+    foreach(path /home/pi/manta_ws/devel_isolated/eigen_conversions/lib;/home/pi/manta_ws/devel_isolated/nav_msgs/lib;/home/pi/manta_ws/devel_isolated/manta/lib;/home/pi/manta_ws/devel_isolated/geometry_msgs/lib;/home/pi/manta_ws/devel_isolated/geometry/lib;/home/pi/manta_ws/devel_isolated/dynamic_reconfigure/lib;/home/pi/manta_ws/devel_isolated/diagnostic_msgs/lib;/home/pi/manta_ws/devel_isolated/common_msgs/lib;/home/pi/manta_ws/devel_isolated/actionlib_msgs/lib;/opt/ros/indigo/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

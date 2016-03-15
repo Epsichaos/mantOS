@@ -134,36 +134,6 @@ geometry_msgs/Vector3.h
 geometry_msgs/Vector3.h
 -
 
-/home/pi/manta_ws/devel_isolated/orocos_kdl/include/kdl/frames.hpp
-utilities/kdl-config.h
-/home/pi/manta_ws/devel_isolated/orocos_kdl/include/kdl/utilities/kdl-config.h
-utilities/utility.h
-/home/pi/manta_ws/devel_isolated/orocos_kdl/include/kdl/utilities/utility.h
-frames.inl
-/home/pi/manta_ws/devel_isolated/orocos_kdl/include/kdl/frames.inl
-
-/home/pi/manta_ws/devel_isolated/orocos_kdl/include/kdl/frames.inl
-
-/home/pi/manta_ws/devel_isolated/orocos_kdl/include/kdl/utilities/kdl-config.h
-
-/home/pi/manta_ws/devel_isolated/orocos_kdl/include/kdl/utilities/utility.h
-kdl-config.h
-/home/pi/manta_ws/devel_isolated/orocos_kdl/include/kdl/utilities/kdl-config.h
-cstdlib
--
-cassert
--
-cmath
--
-
-/home/pi/manta_ws/src/geometry/eigen_conversions/include/eigen_conversions/eigen_kdl.h
-Eigen/Core
--
-Eigen/Geometry
--
-kdl/frames.hpp
--
-
 /home/pi/manta_ws/src/geometry/eigen_conversions/include/eigen_conversions/eigen_msg.h
 std_msgs/Float64MultiArray.h
 -
@@ -184,10 +154,6 @@ geometry_msgs/Wrench.h
 Eigen/Core
 -
 Eigen/Geometry
--
-
-/home/pi/manta_ws/src/geometry/eigen_conversions/src/eigen_kdl.cpp
-eigen_conversions/eigen_kdl.h
 -
 
 /home/pi/manta_ws/src/geometry/eigen_conversions/src/eigen_msg.cpp

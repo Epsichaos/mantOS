@@ -1,37 +1,25 @@
-<?xml version="1.0"?>
-<package format="2">
-  <name>catkin</name>
-  <version>0.6.16</version>
-  <description>Low-level build system macros and infrastructure for ROS.</description>
-  <maintainer email="dthomas@osrfoundation.org">Dirk Thomas</maintainer>
+<package>
+  <name>class_loader</name>
+  <version>0.3.3</version>
+  <description>
+    The class_loader package is a ROS-independent package for loading plugins during runtime and the foundation of the higher level ROS "pluginlib" library. class_loader utilizes the host operating system's runtime loader to open runtime libraries (e.g. .so/.dll files), introspect the library for exported plugin classes, and allows users to instantiate objects of said exported classes without the explicit declaration (i.e. header file) for those classes.
+  </description>
+  <maintainer email="mikael@osrfoundation.org">Mikael Arguedas</maintainer>
+  <author>Mirza Shah</author>
   <license>BSD</license>
 
-  <url type="website">http://www.ros.org/wiki/catkin</url>
-  <url type="bugtracker">https://github.com/ros/catkin/issues</url>
-  <url type="repository">https://github.com/ros/catkin</url>
+  <url type="website">http://ros.org/wiki/class_loader</url>
+  <url type="bugtracker">https://github.com/ros/class_loader/issues</url>
+  <url type="repository">https://github.com/ros/class_loader</url>
+ 
+  <buildtool_depend version_gte="0.5.68">catkin</buildtool_depend>
 
-  <author>Troy Straszheim</author>
-  <author>Morten Kjaergaard</author>
-  <author>Brian Gerkey</author>
-  <author>Dirk Thomas</author>
+  <build_depend>boost</build_depend>
+  <build_depend>libconsole-bridge-dev</build_depend>
+  <build_depend>libpoco-dev</build_depend>
+  <build_depend version_gte="0.3.3">cmake_modules</build_depend>
 
-  <buildtool_depend>cmake</buildtool_depend>
-  <buildtool_export_depend>cmake</buildtool_export_depend>
-
-  <depend>python-argparse</depend>
-  <depend version_gt="0.2.9">python-catkin-pkg</depend>
-
-  <build_depend>python-empy</build_depend>
-
-  <build_export_depend>gtest</build_export_depend>
-  <build_export_depend>python-empy</build_export_depend>
-  <build_export_depend>python-nose</build_export_depend>
-
-  <test_depend>python-mock</test_depend>
-  <test_depend>python-nose</test_depend>
-
-  <export>
-    <rosdoc config="rosdoc.yaml"/>
-    <architecture_independent/>
-  </export>
+  <run_depend>boost</run_depend>
+  <run_depend>libconsole-bridge-dev</run_depend>
+  <run_depend>libpoco-dev</run_depend>
 </package>

@@ -260,7 +260,7 @@ if __name__ == '__main__':
             sys.exit(1)
 
         # environment at generation time
-        CMAKE_PREFIX_PATH = '/home/pi/manta_ws/devel_isolated/diagnostics;/home/pi/manta_ws/devel_isolated/diagnostic_common_diagnostics;/home/pi/manta_ws/devel_isolated/diagnostic_updater;/home/pi/manta_ws/devel_isolated/diagnostic_analysis;/home/pi/manta_ws/devel_isolated/diagnostic_msgs;/home/pi/manta_ws/devel_isolated/common_msgs;/home/pi/manta_ws/devel_isolated/actionlib_msgs;/opt/ros/indigo'.split(';')
+        CMAKE_PREFIX_PATH = '/home/pi/manta_ws/devel_isolated/diagnostic_msgs;/home/pi/manta_ws/devel_isolated/common_msgs;/home/pi/manta_ws/devel_isolated/actionlib_msgs;/opt/ros/indigo'.split(';')
         # prepend current workspace if not already part of CPP
         base_path = os.path.dirname(__file__)
         if base_path not in CMAKE_PREFIX_PATH:

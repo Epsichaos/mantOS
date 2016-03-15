@@ -88,7 +88,7 @@ dynamic_reconfigure__ref_server_EXTERNAL_OBJECTS =
 /home/pi/manta_ws/devel_isolated/dynamic_reconfigure/lib/dynamic_reconfigure/dynamic_reconfigure-ref_server: /opt/ros/indigo/lib/librosconsole.so
 /home/pi/manta_ws/devel_isolated/dynamic_reconfigure/lib/dynamic_reconfigure/dynamic_reconfigure-ref_server: /opt/ros/indigo/lib/librosconsole_log4cxx.so
 /home/pi/manta_ws/devel_isolated/dynamic_reconfigure/lib/dynamic_reconfigure/dynamic_reconfigure-ref_server: /opt/ros/indigo/lib/librosconsole_backend_interface.so
-/home/pi/manta_ws/devel_isolated/dynamic_reconfigure/lib/dynamic_reconfigure/dynamic_reconfigure-ref_server: /usr/lib/arm-linux-gnueabihf/liblog4cxx.so
+/home/pi/manta_ws/devel_isolated/dynamic_reconfigure/lib/dynamic_reconfigure/dynamic_reconfigure-ref_server: /usr/lib/liblog4cxx.so
 /home/pi/manta_ws/devel_isolated/dynamic_reconfigure/lib/dynamic_reconfigure/dynamic_reconfigure-ref_server: /usr/lib/arm-linux-gnueabihf/libboost_regex.so
 /home/pi/manta_ws/devel_isolated/dynamic_reconfigure/lib/dynamic_reconfigure/dynamic_reconfigure-ref_server: /opt/ros/indigo/lib/libxmlrpcpp.so
 /home/pi/manta_ws/devel_isolated/dynamic_reconfigure/lib/dynamic_reconfigure/dynamic_reconfigure-ref_server: /opt/ros/indigo/lib/libroscpp_serialization.so
