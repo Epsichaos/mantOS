@@ -1,8 +1,0 @@
-prefix=/home/pi/manta_ws/install_isolated
-
-Name: urg_c
-Description: Description of urg_c
-Version: 1.0.404
-Cflags: -I/home/pi/manta_ws/install_isolated/include
-Libs: -L/home/pi/manta_ws/install_isolated/lib -lliburg_c
-Requires: 

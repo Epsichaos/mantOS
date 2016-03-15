@@ -1,8 +1,0 @@
-prefix=/home/pi/manta_ws/install_isolated
-
-Name: visualization_msgs
-Description: Description of visualization_msgs
-Version: 1.12.4
-Cflags: -I/home/pi/manta_ws/install_isolated/include
-Libs: -L/home/pi/manta_ws/install_isolated/lib 
-Requires: geometry_msgs message_runtime std_msgs

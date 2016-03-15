@@ -1,2 +1,0 @@
-/home/pi/manta_ws/build_isolated/orocos_kdl/devel/doc/CMakeFiles/docs.dir
-/home/pi/manta_ws/build_isolated/orocos_kdl/devel/src/CMakeFiles/orocos-kdl.dir

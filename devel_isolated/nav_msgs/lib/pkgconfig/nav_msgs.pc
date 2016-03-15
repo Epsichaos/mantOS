@@ -1,8 +1,0 @@
-prefix=/home/pi/manta_ws/devel_isolated/nav_msgs
-
-Name: nav_msgs
-Description: Description of nav_msgs
-Version: 1.12.4
-Cflags: -I/home/pi/manta_ws/devel_isolated/nav_msgs/include
-Libs: -L/home/pi/manta_ws/devel_isolated/nav_msgs/lib 
-Requires: geometry_msgs message_runtime std_msgs actionlib_msgs

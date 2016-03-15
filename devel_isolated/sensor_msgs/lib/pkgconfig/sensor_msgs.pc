@@ -1,8 +1,0 @@
-prefix=/home/pi/manta_ws/devel_isolated/sensor_msgs
-
-Name: sensor_msgs
-Description: Description of sensor_msgs
-Version: 1.12.4
-Cflags: -I/home/pi/manta_ws/devel_isolated/sensor_msgs/include -I/home/pi/manta_ws/src/common_msgs/sensor_msgs/include
-Libs: -L/home/pi/manta_ws/devel_isolated/sensor_msgs/lib 
-Requires: geometry_msgs message_runtime std_msgs

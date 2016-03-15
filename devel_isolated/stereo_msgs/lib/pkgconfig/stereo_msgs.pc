@@ -1,8 +1,0 @@
-prefix=/home/pi/manta_ws/devel_isolated/stereo_msgs
-
-Name: stereo_msgs
-Description: Description of stereo_msgs
-Version: 1.12.4
-Cflags: -I/home/pi/manta_ws/devel_isolated/stereo_msgs/include
-Libs: -L/home/pi/manta_ws/devel_isolated/stereo_msgs/lib 
-Requires: message_runtime sensor_msgs std_msgs

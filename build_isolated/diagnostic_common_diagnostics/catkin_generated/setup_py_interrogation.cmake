@@ -1,6 +1,0 @@
-set(diagnostic_common_diagnostics_SETUP_PY_VERSION "1.8.9")
-set(diagnostic_common_diagnostics_SETUP_PY_SCRIPTS "")
-set(diagnostic_common_diagnostics_SETUP_PY_PACKAGES "diagnostic_common_diagnostics")
-set(diagnostic_common_diagnostics_SETUP_PY_PACKAGE_DIRS "src/diagnostic_common_diagnostics")
-set(diagnostic_common_diagnostics_SETUP_PY_MODULES "")
-set(diagnostic_common_diagnostics_SETUP_PY_MODULE_DIRS "")
