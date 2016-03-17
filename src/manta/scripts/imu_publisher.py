@@ -12,6 +12,19 @@ import RTIMU
 import os.path
 import time
 import math
+import numpy
+
+def computePostOrientation(magnetic_field):
+	if(magnetic_field.y>0):
+		direction = 90-(numpy.arctan(magnetic_field.x/magnetic_field.y)*(180/3.14159))
+	elif(magnetic_field.y<0):
+		direction = 270-(numpy.arctan(magnetic_field.x/magnetic_field.y)*(180/3.14159))
+	elif(magnetic_field.y==0 and magnetic_field.x<0):
+		direction = 180.0
+	else:
+		direction = 0.0
+	direction = direction*3.14159/180
+	return direction
 
 def imuToQuaternion(magnetic_field, acceleration, angular_vel, dt):
 	rotation_quaternion = Quaternion([0.0, 0.0, 0.0, 1.0])
@@ -106,7 +119,8 @@ def talker():
 		angular_vel = Vector3([data["gyro"][0], data["gyro"][1], data["gyro"][2]])
 		#genere le quaternion
 		rotation_quaternion = imuToQuaternion(magnetic_field, acceleration, angular_vel, dt)
-		rospy.loginfo(rotation_quaternion)
+		#calcule la direction 
+		direction = computePostOrientation(magnetic_field)
 
 		#initialize imu variable
 		imu_data = Imu()
@@ -140,7 +154,7 @@ def talker():
 		imu_data.orientation.y = rotation_quaternion.y
 		imu_data.orientation.z = rotation_quaternion.z
 		imu_data.orientation.w = rotation_quaternion.w
-		imu_data.orientation_covariance[0] = 0.0
+		imu_data.orientation_covariance[0] = direction
 		imu_data.orientation_covariance[1] = 0.0
 		imu_data.orientation_covariance[2] = 0.0
 		imu_data.orientation_covariance[3] = 0.0
@@ -149,8 +163,8 @@ def talker():
 		imu_data.orientation_covariance[6] = 0.0
 		imu_data.orientation_covariance[7] = 0.0
 		imu_data.orientation_covariance[8] = 0.0
-
-		rospy.loginfo('message sent')
+		# Ros erreur ?		
+		#imu_data.post_orientation = direction
 		pub.publish(imu_data)
 		rate.sleep()
 		

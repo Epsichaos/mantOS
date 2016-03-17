@@ -33,7 +33,6 @@ def talker():
 #		gps_data.position_covariance_type = 0
 		#publication ros		
 		pub.publish(gps_data)
-		rospy.loginfo(gps_data)
 		rate.sleep()
 		
 if __name__ == '__main__':
