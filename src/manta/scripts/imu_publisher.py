@@ -154,7 +154,7 @@ def talker():
 		imu_data.orientation.y = rotation_quaternion.y
 		imu_data.orientation.z = rotation_quaternion.z
 		imu_data.orientation.w = rotation_quaternion.w
-		imu_data.orientation_covariance[0] = direction
+		imu_data.orientation_covariance[0] = 0.0
 		imu_data.orientation_covariance[1] = 0.0
 		imu_data.orientation_covariance[2] = 0.0
 		imu_data.orientation_covariance[3] = 0.0
@@ -163,8 +163,9 @@ def talker():
 		imu_data.orientation_covariance[6] = 0.0
 		imu_data.orientation_covariance[7] = 0.0
 		imu_data.orientation_covariance[8] = 0.0
-		# Ros erreur ?		
-		#imu_data.post_orientation = direction
+		# Orientation de la direction 	
+		imu_data.direction = direction
+		
 		pub.publish(imu_data)
 		rate.sleep()
 		

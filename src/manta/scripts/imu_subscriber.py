@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import rospy
 from pyrr import *
-from sensor_msgs.msg import Imu
+from manta.msg import Imu
 
 def imu_callback(imu_data):
 	print(imu_data)

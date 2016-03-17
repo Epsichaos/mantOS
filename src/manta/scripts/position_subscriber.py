@@ -58,7 +58,7 @@ def general_callback(data):
 			if(isClose(currentTime, tempTime) == True):
 				rospy.loginfo("---- IMU WRITE ----")				
 				results.write(" OR ")
-				results.write(str(data.orientation_covariance[0]))
+				results.write(str(data.direction))
 				isImuWritten = True
 			else:
 				results.close()
