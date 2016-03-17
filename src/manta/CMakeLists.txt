@@ -50,7 +50,6 @@ find_package(catkin REQUIRED
    FILES
 	Imu.msg
 	NavSatFix.msg
-	ImuData.msg
  )
 
 ## Generate services in the 'srv' folder
@@ -117,28 +116,26 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 # include_directories(include)
+#include_directories(
+#  ${catkin_INCLUDE_DIRS}
+#)
 
-## Declare a C++ library
+## Declare a cpp library
 # add_library(manta
 #   src/${PROJECT_NAME}/manta.cpp
 # )
 
-## Add cmake target dependencies of the library
-## as an example, code may need to be generated before libraries
-## either from message generation or dynamic reconfigure
-# add_dependencies(manta ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+## Declare a cpp executable
+#add_executable(heading_control_node src/heading_control.cpp src/HeadingController.cpp src/HeadingController.h)
 
-## Declare a C++ executable
-# add_executable(manta_node src/manta_node.cpp)
-
-## Add cmake target dependencies of the executable
-## same as for the library above
-# add_dependencies(manta_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+## Add cmake target dependencies of the executable/library
+## as an example, message headers may need to be generated before nodes
+# add_dependencies(manta_node manta_generate_messages_cpp)
 
 ## Specify libraries to link a library or executable target against
-# target_link_libraries(manta_node
-#   ${catkin_LIBRARIES}
-# )
+ #target_link_libraries(heading_control_node
+ #  ${catkin_LIBRARIES}
+ #)
 
 #############
 ## Install ##

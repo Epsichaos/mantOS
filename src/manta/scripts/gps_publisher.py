@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import rospy
-from manta.msg import NavSatFix
+from sensor_msgs.msg import NavSatFix
 
 import os
 from gps import *
