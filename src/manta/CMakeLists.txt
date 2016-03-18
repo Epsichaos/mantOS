@@ -50,6 +50,8 @@ find_package(catkin REQUIRED
    FILES
 	Imu.msg
 	NavSatFix.msg
+	CmdMotors.msg
+	Radio.msg
  )
 
 ## Generate services in the 'srv' folder
