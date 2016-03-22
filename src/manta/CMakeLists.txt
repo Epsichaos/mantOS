@@ -52,6 +52,7 @@ find_package(catkin REQUIRED
 	NavSatFix.msg
 	CmdMotors.msg
 	Radio.msg
+	Echo.msg
  )
 
 ## Generate services in the 'srv' folder
@@ -110,6 +111,12 @@ catkin_package(
   CATKIN_DEPENDS message_runtime
 #  DEPENDS system_lib
 )
+
+include_directories(include ${catkin_LIBRARIES})
+
+add_executable(echo_publisher src/echo_publisher.cpp)
+target_link_libraries(echo_publisher ${catkin_LIBRARIES})
+add_dependencies(echo_publisher manta_generate_messages_cpp)
 
 ###########
 ## Build ##
