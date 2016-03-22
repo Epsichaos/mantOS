@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 import rospy
 #from manta.msg import Imu
-#from sensor_msgs.msg import Imu
-from manta.msg import Imu
+from sensor_msgs.msg import Imu
+#from manta.msg import Imu
 from pyrr import *
 
 import sys, getopt
@@ -164,7 +164,7 @@ def talker():
 		imu_data.orientation_covariance[7] = 0.0
 		imu_data.orientation_covariance[8] = 0.0
 		# Orientation de la direction 	
-		imu_data.direction = direction
+		#imu_data.direction = direction
 		
 		pub.publish(imu_data)
 		rate.sleep()

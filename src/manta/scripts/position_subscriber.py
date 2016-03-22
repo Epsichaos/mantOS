@@ -2,7 +2,8 @@
 import rospy
 import time
 from sensor_msgs.msg import NavSatFix
-from manta.msg import Imu
+#from manta.msg import Imu
+from sensor_msgs.msg import Imu
 from sensor_msgs.msg import LaserScan
 import numpy
 
