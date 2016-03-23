@@ -15,6 +15,7 @@ isImuWritten = False
 isTimeWritten = False
 currentTime = 0
 tempTime = 0
+fileName = "results"+str(round(time.time()*1000000000))+".txt"
 
 def isClose(t1, t2):
 	if(abs(t2-t1)<3000000000):
@@ -38,7 +39,7 @@ def resetAll():
 	isEchosounderWritten = False	
 	isTimeWritten = False
 
-	results = open("results.txt", "a")
+	results = open(fileName, "a")
 	results.write("\n")
 def general_callback(data):
 	#use global variables
@@ -50,7 +51,7 @@ def general_callback(data):
 	global currentTime
 	global tempTime
 
-	results = open("results.txt", "a")
+	results = open(fileName, "a")
 	if(isGpsWritten == False and isEchosounderWritten == False and isImuWritten == False and isTimeWritten == False):
 		currentTime = int(round(time.time()*1000000000))
 		results.write("T ")
