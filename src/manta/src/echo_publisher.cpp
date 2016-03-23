@@ -32,27 +32,23 @@ int setSerial(int fd) {
 }
 
 double getProfondeur(int fd) {
-	double buffer[5];
-	char data[10];
+	int buffer[5];
+	char data[1];
 	int i = 0;
-	int j = 0;
-
+	int j;
+	double profondeur = 0.0;
+	
 	read(fd, &data, sizeof(char));
-	do {
-		if(data[0]!='.') {
-			buffer[i] = atof(data);
+	do {		
+		read(fd, &data, sizeof(char));		
+		if(data[0]=='0' || data[0]=='1' || data[0]=='2' || data[0]=='3' || data[0]=='4' || data[0]=='5' || data[0]=='6' || data[0]=='7' || data[0]=='8' || data[0]=='9') {					
+			j = data[0] - 48;
+			buffer[i] = j;
+			i++;			
 		}
-		read(fd, &data, sizeof(char));
-		i++;
-	} while(data[0]!='m');	
-	while(j<5) {
-		if(buffer[j]<0.01 && buffer[j]!=0) {
-			buffer[j] = 0;
-		}
-		j++;
-	}
-	double profondeur = buffer[0]*100 + buffer[1]*10 + buffer[2] + buffer[3]/10 + buffer[4]/100;
-	return profondeur;
+	} while(data[0] != 'm');
+	profondeur = (double) buffer[0]*100 + (double) buffer[1]*10 + (double) buffer[2] + (double) buffer[3]/10 + (double) buffer[4]/100;
+	return profondeur; 
 }
 
 int main(int argc, char **argv) {
