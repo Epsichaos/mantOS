@@ -21,6 +21,6 @@ We used ROS on a Raspberry Pi 2 for the implementation and the gathering of data
 Results
 -------
 
-The ouput file allowed us to see the map of depths and to extrapolate missing data using Matlab packages. Yo can see bellow one example of the experimentation we conduce on a lac near our school.
+The ouput file allowed us to see the map of depths and to extrapolate missing data using Matlab packages. You can see bellow one example of the experimentation we conduced on a lac near our school.
 
 ![alt tag](https://raw.githubusercontent.com/epsichaos/mantos/master/img/map.png)
